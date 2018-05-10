@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>SSAD | Solntsevsky SysAdminDay | Солнцевский S.A.D. :: День системного администратора</title>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+<div>
+    <a href="{% url 'member_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+</div>
+{% load staticfiles %}
+
+<link rel="stylesheet" media="screen" href="{% static 'countdown/css/normalize.css' %}"/>
+<link rel="stylesheet" media="screen" href="{% static 'countdown/css/style.css' %}"/>
+<script src="{% static 'countdown/js/countdown.js' %}"></script>
+</head>
+<body>
+
+{% block content %}
+
+{% endblock %}
+
+</body>
+</html>

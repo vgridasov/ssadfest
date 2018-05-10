@@ -1,0 +1,23 @@
+
+{% extends "countdown/wrapper.html" %}
+{% block content %}
+
+<div class="bg-gradient"></div>
+<div class="container">
+    <h1>Солнцевский S.A.D.</h1>
+    <h2>Регистрация на фестиваль:</h2>
+        <div class="fieldtext">
+            <form method="POST" class="post-form">{% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="save btn btn-default">Отправить</button>
+            </form>
+        </div>
+
+    <footer>
+      <p>
+        Copyright(C) Solntsevsky SysAdminDay All rights reserved.
+      </p>
+    </footer>
+  </div>
+
+{% endblock %}
