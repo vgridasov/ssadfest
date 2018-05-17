@@ -13,13 +13,13 @@ class TeamAdmin(admin.ModelAdmin):
 
 class Member(models.Model):
     email = models.CharField(max_length=100)
-    name = models.CharField(max_length=50, default='Безымянный Гость')
-    phone = models.CharField(max_length=20)
-    city = models.CharField(max_length=50, default='Малые #беня')
-    company = models.CharField(max_length=50, default='Частное лицо')
-    specialization = models.CharField(max_length=100, default='Ламер')
-    regdate = models.DateField(auto_now_add=True)
-    team = models.ForeignKey('Team', null=True, blank=True, on_delete=models.SET_NULL)
+    name = models.CharField(max_length=50, default='Безымянный Гость', verbose_name=u'Фамилия, Имя')
+    phone = models.CharField(max_length=20, verbose_name=u'Телефон')
+    city = models.CharField(max_length=50, default='Малые #беня', verbose_name=u'Город (нас. пункт)')
+    company = models.CharField(max_length=50, default='Частное лицо', verbose_name=u'Организация')
+    specialization = models.CharField(max_length=100, default='Ламер', verbose_name=u'Специализация в ИТ')
+    regdate = models.DateField(auto_now_add=True, verbose_name=u'Дата регистрации')
+    team = models.ForeignKey('Team', null=True, blank=True, on_delete=models.SET_NULL, verbose_name=u'Участник команды')
 
 
 class MemberAdmin(admin.ModelAdmin):

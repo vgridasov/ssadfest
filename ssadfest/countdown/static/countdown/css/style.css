@@ -51,7 +51,9 @@ h2 {
 }
 
 .fieldtext {
-    color: #999;
+    text-align: right;
+    color: #888;
+    background: url('../images/sad.png') no-repeat left;
 }
 
 #CDT {
