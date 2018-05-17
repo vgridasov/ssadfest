@@ -5,12 +5,12 @@
   <div class="container">
       <h1>Солнцевский S.A.D.</h1>
       <h2>Зарегистрированные участники</h2>
-      <table>
+      <table width=100%>
           <thead><th>Участник</th><th>Город</th><th>Компания</th><th>Команда</th></thead>
           <tbody>
           {% for member in members %}
-          <tr>
-          <td>{{ member.name }}</td><td>{{ member.city }}</td><td>{{ member.company }}</td><td>{{ member.team.name }}</td>
+          <tr width=100%>
+          <td align="left">{{ member.name }}</td><td>{{ member.city }}</td><td>{{ member.company }}</td><td>{{ member.team.name }}</td>
           </tr>
           {% endfor %}
           </tbody>

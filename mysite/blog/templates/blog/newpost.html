@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}
+МойБлог: Добавление записи
+{% endblock %}
+
+
+{% block header %}
+<h1>Новая запись:</h1>
+{% endblock %}
+
+
+{% block content %}
+
+
+<div>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Отправить</button>
+    </form>
+</div>
+
+<div align="center">
+    <a href="/">Назад</a>
+</div>
+
+
+{% endblock %}
